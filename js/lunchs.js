@@ -43,13 +43,17 @@ async function getLunchs() {
     document.querySelector(".dados-lanches").innerHTML += `
         <tr>
           <td>${r.lanche}</td>
-          <td>${r.ingredientes}</td>
+          <td>${r.ingredientes.join(", ")}</td>
           <td>
-            <button class="btn btn-warning" onclick="openModalUpdateLunch('${r.id}')" data-bs-toggle="modal"
+            <button class="btn btn-warning" onclick="openModalUpdateLunch('${
+              r.id
+            }')" data-bs-toggle="modal"
             data-bs-target="#modal-update">EDITAR</button>
           </td>
           <td>
-            <button class="btn btn-danger" onclick="deleteLunch('${r.id}')">DELETAR</button>
+            <button class="btn btn-danger" onclick="deleteLunch('${
+              r.id
+            }')">DELETAR</button>
           </td>
         </tr>
       `;
@@ -101,7 +105,7 @@ async function openModalUpdateLunch(id) {
         <div class="modal-body">
           <div class="mb-3">
               <label for="lanche" class="form-label">Nome do lanche *</label>
-              <input type="text" class="form-control" id="lanche" required />
+              <input type="text" class="form-control" id="lanche" required placeholder="${dados.lanche}" />
             </div>
             <div class="mb-3">
               <div class="selectBox">
