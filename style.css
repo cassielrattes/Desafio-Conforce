@@ -1,0 +1,31 @@
+.selectBox {
+  position: relative;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#modal-lanches #checkboxes,
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+#modal-lanches #checkboxes.ativo,
+#checkboxes.ativo {
+  display: block;
+}
+
+#modal-lanches #checkboxes label,
+#checkboxes label {
+  display: block;
+}
+
+#modal-lanches #checkboxes label:hover,
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
